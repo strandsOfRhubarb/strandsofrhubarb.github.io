@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - mi web</title>
+</head>
+<body>
+    <header><h1>Formulario de registro</h1></header>
+    <main>
+        <section>
+            <form action="procesa.php" method="post">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <label for="Nombre">Nombre: <input type="text" name="Nombre" size="30" maxlength="50"></label><br>
+                    <label for="Apellidos">Apellidos: <input type="text" name="Nombre" size="30" maxlength="50"></label><br>
+                    <label for=contraseña>Contraseña:<input type=password name=contraseña minlength="8"></label> <label for="Edad">Edad: <input type=number  name=Edad min=10 max=100 disabled></label><br>
+                    <label for=gender>Sexo:<input type="radio" name="Genero" id="Genero" value="H" checked>Hombre
+                    <input type="radio" name="Genero" id="Genero" value="M">Mujer<br></label>
+                    <label for="Tlf">Teléfono: <input type="tel" name="Tlf" id="tlf"></label><br>
+                    <input type="submit" value="Enviar datos"> <input type="reset" value="Reiniciar datos">
+                </fieldset>
+            </form>
+            <br>
+            <form method="auth">
+                <label for="Email">Email: <input type=email name=Email> </label><br>
+                <label for="pob">Población:</label>
+                <select name="pob" id="pob">
+                    <option value="Alicante">Alicante</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Sevilla" selected>Sevilla</option>
+                    <option value="Valencia">Valencia</option>
+                </select><br>
+                <label for=mensaje>Descripción: </label><textarea name="mensaje" rows="4" cols="30">
+                    
+                </textarea> 
+                <p> 
+                    <input type="checkbox" name="acuerdo" value="advertisement" checked /> Deseo recibir información sobre novedades y ofertas<br>
+                    <input type="checkbox" name="acuerdo" value="tos" /> Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos<br>
+                </p>
+                <label for="file">Adjuntar archivo: <input type="file" name="file" /> </label><br>
+                <input type="submit" value="Enviar datos"> <input type="reset" value="Reiniciar datos">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
